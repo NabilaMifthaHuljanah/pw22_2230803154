@@ -1,20 +1,15 @@
 <?php
+// Mengambil nilai 'angka' dari URL
+$angka = isset($_GET['angka']) ? intval($_GET['angka']) : 10;
 
-$a "hello"; 
-$hello= "Hello world!";
+// Validasi nilai 'angka' agar tidak melebihi batas tertentu
+$angka = max(1, min($angka, 10));
 
-// menampilkan isi variabel $a 
-// hello 
-echo $a . "</br>";
-
-// menampilkan isi variabel $a 
-// Hello world! 
-echo Shello."</br>";
-
-// menampilkan isi dari variabel dengan nama yang sama seperti isi variabel $a 
-// isi variabel sa hello. jadi, nanti akan menampilkan isi dari variabel 
-Shello
-// Hello world
-echo $sa. "</br>";
-
+// Menampilkan rangkaian angka terurut
+for ($i = 1; $i <= $angka; $i++) {
+    for ($j = 1; $j <= $angka - $i + 1; $j++) {
+        echo $j . ' ';
+    }
+    echo "<br>";
+}
 ?>
